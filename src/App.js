@@ -220,9 +220,9 @@ function Avatar({ author: {acc_url, avatar_url}}) {
 	return <a href={acc_url}><UserAvatar src={avatar_url} alt="user avatar" /></a>
 }
 
-function ResultDetails({ title, url, comments, author: { name, acc_url }}) {
+function ResultDetails({ title, url, comments, author: { name, acc_url }, project: { name: projectName, org } }) {
 	return <IssueDetails>
-	  <IssueTitle><a href={url}>{title} ({comments} comments)</a></IssueTitle>
+	  <IssueTitle><a href={url}>{`[${org}/${projectName}]`} {title} ({comments} comments)</a></IssueTitle>
 		<IssueAuthor><a href={acc_url}>{name}</a></IssueAuthor>
 	</IssueDetails>
 }
@@ -272,7 +272,7 @@ function Search(props) {
 			{results.map((result, index) => {
 			  return <SearchResultContainer key={index}>
 					<Avatar author={result.author} />
-					<ResultDetails title={result.title} author={result.author} url={result.url} comments={result.comments} />
+					<ResultDetails title={result.title} author={result.author} url={result.url} comments={result.comments} project={result.project} />
 			  </SearchResultContainer>
 		  })}
 		</SearchResultsContainer>
