@@ -196,7 +196,7 @@ function App() {
         <Nav>
           <NavList>
             <NavLink><CustomisedNavLink to="/">Home</CustomisedNavLink></NavLink>
-            <NavLink><ExternalNavLink href="https://github.com/glentiki/gh-issue-finder">Fork me on Github&nbsp;&nbsp;<Github size={24} /></ExternalNavLink></NavLink>
+            <NavLink><ExternalNavLink href="https://github.com/sinchang/gh-issue-finder">Fork me on Github&nbsp;&nbsp;<Github size={24} /></ExternalNavLink></NavLink>
           </NavList>
         </Nav>
 
@@ -311,7 +311,7 @@ function Home(props) {
 
 function Footer() {
 	return <FooterComp>
-		<h2>Made with <span role="img" aria-label="love">❤️</span> for the Open Source Community by <a href="https://twitter.com/GlenTiki">GlenTiki</a></h2>
+		<h2>Made with <span role="img" aria-label="love">❤️</span> for the Open Source Community by <a href="https://twitter.com/GlenTiki">GlenTiki</a> and <a href="https://twitter.com/sinchangwen">sinchang</a> </h2>
 	</FooterComp>
 }
 
