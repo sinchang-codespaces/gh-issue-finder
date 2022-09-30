@@ -11,7 +11,7 @@ const handler = async (req, res) => {
   const params = url.searchParams
   const org = params.get('org') || 'fastify'
   const labelParam = params.getAll('labels')
-  const labels = labelParam.length > 0 ? labelParam : ['help wanted', 'good first issue', 'pr welcome']
+  const labels = labelParam.length > 0 ? labelParam : ['help wanted', 'good first issue', 'pr welcome', 'contribution welcome']
   const includeBody = params.get('includeBody') || false
 
   const itemSearchResults = (await Promise.all(labels.map(async label => {
