@@ -86,6 +86,7 @@ const Button = styled.button`
 	color: ${props => props.theme.light};
 	border-radius: 5px;
 	font: 600 1rem system-ui;
+	cursor: pointer;
 `
 
 const SearchResultsContainer = styled.div`
