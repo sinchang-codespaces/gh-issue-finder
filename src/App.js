@@ -296,7 +296,7 @@ function Home(props) {
 		e.preventDefault()
 		if (input.current.value === '') return;
 
-		const org = input.current.value.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>{}[\]\\/\s]/gi, '')
+		const org = input.current.value.replace(/[`~!@#$%^&*()_|+=?;:'",.<>{}[\]\\/\s]/gi, '')
 		input.current.value = org
 		props.history.push(`/search?org=${org}`)
 	}
