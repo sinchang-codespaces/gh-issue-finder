@@ -16,7 +16,8 @@ const handler = async (req, res) => {
 
   const itemSearchResults = (await Promise.all(labels.map(async label => {
 	  const issues = await octokit.search.issuesAndPullRequests({
-	  	q: `archived:false is:issue is:open sort:updated-desc label:"${label}" org:"${org}"`
+	  	q: `archived:false is:issue is:open sort:updated-desc label:"${label}" org:"${org}"`,
+		per_page: 100
 	  })
 
 	  return issues.data.items
